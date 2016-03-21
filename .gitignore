@@ -2,6 +2,7 @@
 .project
 .settings/
 .jshintrc
+.idea
 node_modules/
 bower_components/
 *~

@@ -18,9 +18,7 @@ var video;
 var webRtcPeer;
 
 window.onload = function() {
-	console = new Console();
 	video = document.getElementById('video');
-
 	document.getElementById('call').addEventListener('click', function() { presenter(); } );
 	document.getElementById('viewer').addEventListener('click', function() { viewer(); } );
 	document.getElementById('terminate').addEventListener('click', function() { stop(); } );
@@ -32,7 +30,7 @@ window.onbeforeunload = function() {
 
 ws.onmessage = function(message) {
 	var parsedMessage = JSON.parse(message.data);
-	console.info('Received message: ' + message.data);
+	//console.info('Received message: ' + message.data);
 
 	switch (parsedMessage.id) {
 	case 'presenterResponse':
